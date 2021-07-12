@@ -53,4 +53,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region us-east-1 \
-            dist/ s3://app.cymasuite.com
+            [folder] s3://[bucket-name]
