@@ -20,6 +20,7 @@ We need create folder `.github/workflows/ci.yml`
 We need to go to a settings -> secrets and create:
 
 AWS_ACCESS_KEY_ID
+
 AWS_SECRET_ACCESS_KEY
 
 Optional:

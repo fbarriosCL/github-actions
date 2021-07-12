@@ -1,0 +1,25 @@
+name: CI SSH
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  job_one:
+    # The type of runner that the job will run on
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Running ssh connection
+      uses: appleboy/ssh-action@master
+      with:
+        host: secrets.IP
+        username: deploy
+        key: ${{ secrets.OMG_SECRET }}
+        port: 22
+        script: |
+          'command example'
