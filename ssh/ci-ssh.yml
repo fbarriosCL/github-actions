@@ -17,7 +17,7 @@ jobs:
     - name: Running ssh connection
       uses: appleboy/ssh-action@master
       with:
-        host: secrets.IP
+        host: ${{ secrets.IP }}
         username: deploy
         key: ${{ secrets.OMG_SECRET }}
         port: 22
